@@ -7,6 +7,7 @@ class Article extends Component {
     return `
     p {
       margin-top: -16px;
+      line-height: 150%;
       padding: 0 10px 50px;
     }
     `

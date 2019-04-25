@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "now src -n the-news -V 2",
+    "deploy": "now",
     "start": "serve -s src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

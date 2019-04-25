@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 registerPaint('slanted-bg', class {
   constructor () {
     this.hue = 200
