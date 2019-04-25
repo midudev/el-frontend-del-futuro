@@ -14,10 +14,15 @@
   <meta name="description" content="The News es un periódico digital del futuro. Serio y respetable" />
   
   <script>
-    CSS.paintWorklet.addModule('/workers/paint-modules.js');
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/workers/sw.js');
-    })
+    if ('paintWorklet' in CSS) {
+      CSS.paintWorklet.addModule('/workers/paint-modules.js');
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/workers/sw.js');
+      })
+    }
   </script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/statics/images/apple-touch-icon.png">
