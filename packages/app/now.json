@@ -5,7 +5,7 @@
     { "src": "src/**", "use": "@now/static" }
   ],
   "routes": [
-    {"src": "/(statics|components|containers|main|pages)/(.*)", "dest": "/src/$1/$2"},
+    {"src": "/(statics|components|containers|main|pages|workers)/(.*)", "dest": "/src/$1/$2"},
     {"src": "/robots.txt", "dest": "/src/static/robots.txt"},
     {"src": "/.*", "dest": "/src/index.html"}
   ]
