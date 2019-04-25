@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "el-frontend-del-futuro",
+  "builds": [
+    { "src": "packages/api/index.js", "use": "@now/node" },
+    { "src": "packages/app/src/**", "use": "@now/static" }
+  ],
+  "routes": [{
+    "src": "/api/(.*)",
+    "dest": "index.js"
+  }, {
+    "src": "/(.*)",
+    "dest": "index.html"
+  }]
+}

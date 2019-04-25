@@ -1,0 +1,28 @@
+{
+  "name": "el-frontend-del-futuro",
+  "version": "1.0.0",
+  "description": "Travel to the future of frontend 🚀",
+  "main": "index.js",
+  "scripts": {
+    "start:api": "node packages/api/index.js",
+    "start:app": "serve -s packages/app/src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midudev/el-frontend-del-futuro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/midudev/el-frontend-del-futuro/issues"
+  },
+  "homepage": "https://github.com/midudev/el-frontend-del-futuro#readme",
+  "devDependencies": {
+    "@s-ui/mono": "^1.41.0"
+  },
+  "dependencies": {
+    "json-server": "^0.14.2"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "categories": [
+    {
+      "id": "actualidad",
+      "image": "/statics/category_actualidad.webp",
+      "emoji": "📰"
+    },
+    {
+      "id": "economia",
+      "image": "/statics/category_economia.webp",
+      "emoji": "💶"
+    },
+    {
+      "id": "cultura",
+      "image": "/statics/category_cultura.webp",
+      "emoji": "📖"
+    },
+    {
+      "id": "tecnologia",
+      "image": "/statics/category_tecnologia.webp",
+      "emoji": "🚀"
+    },
+    {
+      "id": "deportes",
+      "image": "/statics/category_deportes.webp",
+      "emoji": "⚽️"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "categoryId": "actualidad",
+      "subtitle": "TRUMP HA ASEGURADO QUE LAS OBRAS ESTARÁN LISTAS ANTES DE QUE ÉL ACABE CON EL MUNDO",
+      "title": "El Ayuntamiento de Nueva York inicia las obras para enterrar la Estatua de la Libertad en la playa",
+      "content": "Con la intención de que los astronautas que han salido al espacio puedan encontrarla cuando vuelvan y se den cuenta de que están en lo que un día fue su hogar, el Ayuntamiento de Nueva York ha decidido iniciar las obras para enterrar la Estatua de la Libertad en la playa lo antes posible. “La enterraremos de cintura para arriba al lado de unas rocas”, explica Bill de Blasio, alcalde de la ciudad.\n\nLa decisión llega después de comprobar que la humanidad se acerca irremediablemente a su fin, y tras ver que muchos gorilas empiezan a hablar cada vez con más fluidez. “Enterrar la Estatua de la Libertad en la arena será el perfecto broche final”, explican desde el consistorio.",
+      "image": "/1.webp"
+    },
+    {
+      "id": 2,
+      "categoryId": "economia",
+      "title": "Un potente zoom desenfocado de números informa a los analistas de que algo ocurre con la economía",
+      "subtitle": "'SEA LO QUE SEA, ESTÁ PASANDO A GRAN VELOCIDAD', DICEN LOS ANALISTAS",
+      "content": "“Uo, uo, uo… para el carro vaquero, ¿qué está pasando? Lo que sea que esté ocurriendo debe de ser muy urgente y muy rápido”, han declarado cientos de analistas económicos tras ver en la prensa una fotografía con un zoom que se dirige a toda velocidad a unos números de la Bolsa, lo que indica inconfundiblemente que la economía “ha cambiado” y que el panorama de la Bolsa “probablemente sea distinto a hace unos días, quizá peor, quizá mejor”.\n\n“Sea lo que sea, están sucediendo cosas, definitivamente, y a además a gran velocidad”, han confirmado cientos de ejecutivos de la Bolsa al ver la fotografía que ilustra el artículo.",
+      "image": "/2.webp"
+    },
+    {
+      "id": 3,
+      "categoryId": "economia",
+      "title": "Los bancos pagan el impuesto de las hipotecas en monedas de céntimo",
+      "subtitle": "SE ENTREGAN EN BOLSAS DE PLÁSTICO QUE APENAS SOPORTAN EL PESO DE LA CALDERILLA",
+      "content": "Acatando el decreto ley aprobado por el Gobierno hace apenas unos días, la banca española ha empezado a abonar esta semana el impuesto de actos jurídicos documentados (AJD) de las hipotecas. Lo ha hecho, eso sí, en monedas de céntimo.\n\nLos clientes que han pagado el impuesto en los últimos años han sido citados en sus respectivas oficinas para recoger el dinero que se les debía, entregado en bolsas de plástico que a duras penas soportan el peso de las monedas. “Encima te cobran las bolsas, no hay derecho”, se quejaba uno de los clientes esta mañana mientras recogía centenares de monedas esparcidas por la acera después de que la bolsa acabara rompiéndose en medio de la calle.",
+      "image": "/3.webp"
+  },
+
+    {
+      "id": 4,
+      "categoryId": "cultura",
+      "title": "El 70% de los científicos de todo el mundo trabaja en desarrollar teorías para predecir el final del Universo Cinematográfico Marvel",
+      "subtitle": "'EL FIN DEL UNIVERSO MARVEL SE ACERCA', HIPOTETIZAN MILES DE CIENTÍFICOS",
+      "content": "Miles de científicos de todo el mundo están trabajando a contrarreloj a fin de construir teorías e hipótesis que permitan describir el destino final del Universo Cinematográfico Marvel (UCM), un universo en “constante expansión” que parece que va frenándose poco a poco y cuyos elementos empiezan a perder su poder de atracción. “La hipótesis principal es que el Universo Marvel que todos conocemos está a punto de llegar a su fin en un evento de dimensiones cósmicas conocido como ‘Avengers 4’ y que dará lugar a un retorno al punto original del que nacerá otro universo”, explica el físico teórico Max Schultheiss, de 43 años.\n\nFísicos teóricos, ingenieros informáticos, químicos, lingüistas y voluntarios de todo tipo colaboran y discuten en internet a fin de desentrañar los “enormes misterios de la existencia Marvel”. Todos admiten que, por ahora, es urgente centrarse en este nuevo terreno de investigación, que se ha visto renovado a la luz de los nuevos datos que arroja el último tráiler.",
+      "image": "/4.webp"
+    },
+    {
+      "id": 5,
+      "categoryId": "tecnologia",
+      "subtitle": "Es la primera vez que un ser humano sin contrato indefinido atraviesa la atmósfera terrestre",
+      "title": "Una inspección de Trabajo obliga a la NASA a mandar de urgencia al espacio a 230 falsos autónomos",
+      "content": "Dos inspectores de la Consejería de Trabajo, Migraciones y Seguridad Social de Estados Unidos se han personado esta mañana por sorpresa en el centro espacial de la NASA en Cabo Cañaveral, forzando a la agencia americana a “deshacerse” en tiempo récord de todos los empleados que trabajaban en las instalaciones como falsos autónomos, unos 230 según fuentes no oficiales.\n\n“Los han metido a todos en un cohete, saltándose todos los protocolos de seguridad, con una cuenta atrás susurrada de apenas tres segundos, y los han mandado al espacio. Luego han lanzado también un transbordador con sus ordenadores, sus credenciales y cualquier documentación que pudiera dejar rastro”, comenta un ingeniero desde el anonimato. “En el último momento, han tenido el detalle de cargar una máquina de ‘vending’ para que puedan alimentarse”, añade.",
+      "image": "/5.webp"
+    },
+    {
+      "id": 6,
+      "categoryId": "deportes",
+      "title": "Álvaro Morata estará tres semanas de baja tras recibir una colleja del árbitro",
+      "subtitle": "El jugador no acudió al VAR tras la agresión",
+      "image": "/6.webp",
+      "content": "Álvaro Morata estará tres semanas de baja tras recibir una colleja del árbitro. El delantero madrileño sufre un traumatismo craneoencefálico y se perderá lo que queda de temporada."
+    },
+    {
+      "id": 7,
+      "categoryId": "tecnologia",
+      "title": "Los recortes en Ciencia obligan a los matemáticos a poner anuncios en el número Pi cada diez cifras",
+      "subtitle": "También han tenido que dejar de multiplicar y ya solo pueden dividir",
+      "image": "/7.webp",
+      "content": "Después de años recibiendo cada vez menos financiación, los matemáticos han tenido que empezar a poner anuncios en el número Pi cada diez cifras para luchar contra los recortes en Ciencia. “También empezaremos a poner nombres de marcas en los problemas de los libros, cuya solución será siempre comprar más”, reconoce Andrés Comesaña, de la Universidad de Vigo.\n\nAsí, a partir de esta semana, el número Pi será 3 coma 14, 15, 92, 65, 35, Carglass Cambia, Carglass repara, 89, 79… y así hasta el infinito. “Era esto o nada”, se confiesa Comesaña. “Muchos matemáticos ya solo podían hacer operaciones con números negativos”, denuncia. Gracias a un acuerdo comercial, el número Pi pronto pasará a llamarse número Powerade. “La gente no tardará en acostumbrarse y al final será prácticamente lo mismo”, afirma."
+    },
+    {
+      "id": 8,
+      "categoryId": "deportes",
+      "title": "Los jugadores del Real Madrid están convencidos de que hoy juegan partido de Champions",
+      "subtitle": "Creen que tras los buenos resultados en Liga, merecen una segunda oportunidad",
+      "image": "/8.webp",
+      "content": "Los jugadores del Real Madrid están convencidos de que hoy juegan partido de Champions. El Leganés pondrá el himno de esa competición para no romperles la ilusión."
+    },
+    {
+      "id": 9,
+      "categoryId": "economia",
+      "title": "Gracias a la llegada de China, la Luna abrirá también los domingos",
+      "subtitle": "ES UN PEQUEÑO PASO PARA UN CHINO, PERO UN GRAN PASO PARA EL SECTOR DE ALIMENTACIÓN, BAZAR Y FRUTOS SECOS",
+      "image": "/9.webp",
+      "content": "El pasado tres de enero, la sonda china Chang’e 4 se convirtió en el primer objeto artificial que logra alunizar en la cara oculta de la Luna. Esta nueva conquista del gigante asiático, calificada por el Global Times como “un gran hito de la exploración humana del universo”, permitirá que nuestro satélite permanezca abierto todos los días de la semana, domingos incluidos.\n\n“Es un pequeño paso para un chino, pero un gran paso para el B.A.F”, declaró el presidente Xi Jinping, definiendo con esas siglas el sector “Bazar, Alimentación y Frutos secos”, que trasciende por vez primera las fronteras terrestres. “La República Popular China no se detendrá hasta que todo el Sistema Solar abra las veinticuatro horas, o las 9’84 horas en el caso de Júpiter, o las 10’8 horas en el caso de Saturno”, añadió a continuación."
+    },
+    {
+      "id": 10,
+      "categoryId": "deportes",
+      "title": "El Atlético cometió alineación indebida al salir con once jugadores en el Camp Nou",
+      "subtitle": "El jugador no acudió al VAR tras la agresión",
+      "image": "/10.webp",
+      "content": "El Atlético cometió alineación indebida al salir con once jugadores en el Camp Nou. En cuanto se arregló esa desagradable situación, el partido pudo seguir con total normalidad."
+    },
+    {
+      "id": 11,
+      "categoryId": "economia",
+      "title": "Jazztel asegura que el comercial que llama a todas horas “es un fan de la compañía que actúa por libre”",
+      "subtitle": "LA OPERADORA ASEGURA QUE DIO DE BAJA SU SERVICIO DE MARKETING TELEFÓNICO 'PORQUE LO HACE TODO ÉL'",
+      "image": "/11.webp",
+      "content": "“No trabaja para nosotros, simplemente es muy fan de nuestros servicios y nos recomienda a todo el mundo, tiene todo el derecho a hacerlo”. Así se excusa la empresa de telefonía Jazztel ante las críticas de muchos españoles, cansados de atender las llamadas del comercial a horas intempestivas.\n\nEn un comunicado difundido esta semana, la compañía aclara que hace más de tres años que no dispone de un servicio de marketing telefónico “porque lo hace todo este ‘jazztelier'”. Jazztel insiste en que “la mejor estrategia comercial es el cliente satisfecho que te recomienda por su cuenta. Nosotros tenemos uno muy motivado que vale por cientos de teleoperadores, nos sentimos afortunados”."
+    }
+  ],
+  "videos": [{
+    "title": "😱 Se gasta 100.000 💶 de golpe al ver que su tarjeta estaba a punto de caducar",
+    "src": "/static/tarjeta.webm"
+  },
+  {
+    "title": "Cenar solo un yogur, principal causa de mortalidad ☠️ entre los españoles 🇪🇸",
+    "src": "/static/yogur.webm"
+  }
+  ]
+}

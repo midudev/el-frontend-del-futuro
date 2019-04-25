@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "now src -n the-news -V 2",
+    "start": "serve -s src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "12.0.1"
+  },
+  "eslintConfig": {
+    "extends": ["./node_modules/standard/eslintrc.json"],
+    "globals": {
+      "HTMLElement": "readonly",
+      "customElements": "readonly"
+    }
+  }
+}

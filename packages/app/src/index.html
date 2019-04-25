@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  
+  <script type='module' src="/main/app.js"></script>
+  <link rel="preload" href="/main/app.js" as="script">
+  <link rel="preload" href="/main/polyfills.js" as="script">
+  <link rel="preload" href="/main/events.js" as="script">
+  <link rel="preload" href="/main/Component.js" as="script">
+  <link rel="preload" href="/main/Logo.js" as="script">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The News es un periódico digital del futuro. Serio y respetable" />
+  
+  <script>
+    CSS.paintWorklet.addModule('/paint-modules.js');
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    })
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/statics/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/statics/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/statics/images/favicon-16x16.png">
+  <link rel="manifest" href="/statics/manifest.json">
+  <link rel="mask-icon" href="/statics/images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#09f">
+
+  <title>The News</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    html {
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+
+      box-shadow: 0 10px 25px 0 rgba(0,0,0,.08);
+      color: #000;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      overflow-x: hidden;
+
+      height: 100vh;
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    main {
+      border-radius: 12px;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    #outlet > .leaving {
+      animation: 1s fadeOut ease-in-out;
+    }
+    #outlet > .entering {
+      animation: 1s fadeIn linear;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+<body>
+    <noscript>
+      Esta página es puramente Client Side Rendering! Sin Javascript, no funciona.
+    </noscript>
+  <main>
+    <div id="router"></div>
+  </main>
