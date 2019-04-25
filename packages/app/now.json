@@ -7,6 +7,7 @@
   "routes": [
     {"src": "/(statics|components|containers|main|pages|workers)/(.*)", "dest": "/src/$1/$2"},
     {"src": "/robots.txt", "dest": "/src/static/robots.txt"},
+    {"src": "/sw.js", "dest": "/src/sw.js"},
     {"src": "/.*", "dest": "/src/index.html"}
   ]
 }
