@@ -68,7 +68,7 @@ initRouter()
 const voiceMessages = [
   'No te he entendido bien.',
   'Ja ja ja. Te había entendido antes. Tienes 11 noticias por leer.',
-  'Gracias las que tu tienes.'
+  'Gracias las que tu tienes. Un saludo a la ExFest!'
 ]
 let i = 0
 
