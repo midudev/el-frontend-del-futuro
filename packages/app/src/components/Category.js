@@ -36,7 +36,7 @@ window.customElements.define(Category, class extends Component {
     }
     img {
       border: 1px solid #ddd;
-      box-shadow: 0px 10px 14px rgba(0,0,0,.2);
+      box-shadow: 0px 10px 14px #00000033;
       border-radius: 50%;
       height: auto;
       filter: grayscale(1);

@@ -64,3 +64,26 @@ function initRouter () {
 }
 
 initRouter()
+
+const voiceMessages = [
+  'No te he entendido bien.',
+  'Ja ja ja. Te había entendido antes. Tienes 11 noticias por leer.',
+  'Gracias las que tu tienes.'
+]
+let i = 0
+
+const synth = window.speechSynthesis
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'º') {
+    const recognition = new webkitSpeechRecognition()
+
+    recognition.lang = 'es-ES'
+    recognition.onresult = function() {
+      const voice = new SpeechSynthesisUtterance(voiceMessages[i])
+      synth.speak(voice)
+      i++
+    }
+    recognition.start()
+  }
+})
