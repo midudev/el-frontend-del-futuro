@@ -1,5 +1,5 @@
-import { Component } from '../main/Component.js'
-import { Link } from '../components/Link.js'
+import { Component } from 'Component'
+import { Link } from 'Link'
 
 export const Article = 'x-article'
 
