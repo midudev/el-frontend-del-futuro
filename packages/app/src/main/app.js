@@ -25,6 +25,11 @@ function initRouter () {
       module: '/pages/article.js'
     },
     {
+      path: '/favs',
+      component: 'x-pages-favs',
+      module: '/pages/favs.js'
+    },
+    {
       path: '/videos',
       component: 'x-pages-videos',
       module: '/pages/videos.js'
