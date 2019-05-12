@@ -1,14 +1,23 @@
+// ⚛️ My own React powered by Web Components!
 export class Component extends HTMLElement {
   constructor () {
     super()
 
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.innerHTML = `
-      ${typeof this.styles === 'function' ? `<style>${this.styles()}</style>` : ''}
-      <slot id="render"></slot>
-    `
-    this.state = typeof this.getInitialState === 'function' ? this.getInitialState() : {}
-    this._render({ attrs: this.getAllAttributes(), state: this.state })
+    const styles = typeof this.styles === 'function'
+      ? `<style>${this.styles()}</style>`
+      : ''
+
+    this.shadowRoot.innerHTML = `${styles}<slot id="render"></slot>`
+
+    this.state = typeof this.getInitialState === 'function'
+      ? this.getInitialState()
+      : {}
+
+    this._render({
+      attrs: this.getAllAttributes(),
+      state: this.state
+    })
   }
 
   getAllAttributes () {
