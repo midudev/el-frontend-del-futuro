@@ -1,4 +1,4 @@
-import { Component } from 'Component'
+import { Component } from 'miduReact'
 import { Link } from '../components/Link.js'
 
 export const Logo = 'x-logo'

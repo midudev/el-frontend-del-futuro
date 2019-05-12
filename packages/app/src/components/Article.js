@@ -1,4 +1,4 @@
-import { Component } from 'Component'
+import { Component } from 'miduReact'
 import { Link } from 'Link'
 
 export const Article = 'x-article'
