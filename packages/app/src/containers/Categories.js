@@ -1,5 +1,5 @@
 import { Category } from '../components/Category.js'
-import { Component } from '../main/Component.js'
+import { Component } from 'Component'
 
 export const Categories = 'x-categories'
 
