@@ -1,17 +1,21 @@
 import { Logo } from '../components/Logo.js'
 import { Article as SingleArticle } from '../components/Article.js'
-import { Component } from '../main/Component.js'
+import { Fav } from '../components/Fav.js'
+
+import { Component } from 'Component'
 
 class Article extends Component {
   styles () {
     return `
     p {
+      font-size: 21px;
       margin-top: -16px;
-      line-height: 150%;
+      line-height: 175%;
       padding: 0 10px 50px;
     }
     `
   }
+
   getInitialState () {
     return { article: false }
   }
@@ -22,7 +26,6 @@ class Article extends Component {
     window.fetch(`https://el-frontend-del-futuro-api.midudev.now.sh/news/${id}`)
       .then(res => res.json())
       .then(article => {
-        console.log(article)
         this.setState({ article })
       })
   }
@@ -39,6 +42,7 @@ class Article extends Component {
       <div>
         <${Logo}></${Logo}>
         <${SingleArticle} id="${id}" title="${title}" subtitle="${subtitle}" image="${image}"></${SingleArticle}>
+        <${Fav} id="${id}" title="${title}" image="${image}"></${Fav}>
         <p>${content}</p>
       </div>
     `
