@@ -1,4 +1,4 @@
-import { Component } from '../main/Component.js'
+import { Component } from 'Component'
 
 export const FunnySection = 'x-funny'
 
@@ -12,7 +12,7 @@ window.customElements.define(FunnySection, class extends Component {
     div {
       box-sizing: border-box;
       padding: 16px;
-    }
+    } 
     section {
       border-radius: 3px;
       box-shadow: 6px 6px 0px rgb(254, 203, 200), -6px -6px 0px rgb(203, 204, 255);
