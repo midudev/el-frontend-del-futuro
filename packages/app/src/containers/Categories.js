@@ -1,5 +1,5 @@
 import { Category } from '../components/Category.js'
-import { Component } from 'miduReact'
+import { Component } from '../main/Component.js'
 
 export const Categories = 'x-categories'
 
