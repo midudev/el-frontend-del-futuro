@@ -35,8 +35,8 @@ window.customElements.define(News, class extends Component {
       `<div>${news
         .filter(singleNews => singleNews.categoryId === selected || selected === 'undefined')
         .map(
-          ({ id, title, subtitle, content, image }) => (
-            `<${Article} id="${id}" link="" title="${title}" subtitle="${subtitle}" image="${image}"></${Article}>`
+          ({ date, id, title, subtitle, content, image }) => (
+            `<${Article} id="${id}" date="${date}" title="${title}" subtitle="${subtitle}" image="${image}"></${Article}>`
           )).join('')}</div>`)
   }
 })
