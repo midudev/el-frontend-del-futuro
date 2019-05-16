@@ -62,10 +62,11 @@ window.customElements.define(FunnySection, class extends Component {
     <div>
       <h3>😆Funny slider! 🤣</h3>
       <section>
-        <video controls src='https://i.imgur.com/fmvchrL.mp4'></video>
+        <video controls src='https://i.imgur.com/lcgsSti.mp4'></video>
         <img src='https://i.imgur.com/pJ99KKC.jpg' />
         <video controls src='https://i.imgur.com/GDlB647.mp4'></video>
         <img src='https://i.imgur.com/i29LQCN.jpg' />
+        <video controls src='https://i.imgur.com/3O52a2Y.mp4'></video>
         <video controls src='https://i.imgur.com/CNFBvOt.mp4'></video>
         <video controls src='https://i.imgur.com/AGpQujt.mp4'></video>
         <video controls src='https://i.imgur.com/KWMmSAu.mp4'></video>
