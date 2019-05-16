@@ -78,14 +78,18 @@ document.addEventListener('keydown', function (e) {
 
     recognition.lang = 'es-ES'
     recognition.onresult = function(e) {
-      const message = e.results[0][0].transcript
+      const { transcript: message, confidence} = e.results[0][0]
+      console.log(e.results)
+      console.log("👂 Lo que me ha entendido es: " + message)
+      console.log("Con una confianza de: " + confidence)
+      
       let articles
       try {
         articles = Array.from(document.querySelector("x-pages-home").shadowRoot.querySelector("x-news").shadowRoot.querySelectorAll("x-article")).slice(0, 2)
       } catch (e) {}
 
-      if (message === 'léeme las noticias') {
-        const voice = new SpeechSynthesisUtterance('¡Vale Miguel Ángel! Las tres primeras son...')
+      if (message.includes('las noticias')) {
+        const voice = new SpeechSynthesisUtterance('¡Vale Miguel Ángel! Las dos primeras son...')
         synth.speak(voice)
         articles.forEach(el => {
           const title = el.getAttribute('title')
@@ -97,10 +101,9 @@ document.addEventListener('keydown', function (e) {
         return
       }
 
-      if (message.includes('entra en la')) {
-        const positions = ['primera', 'segunda', 'tercera']
-        const index = positions.findIndex(position => message.includes(position)) || 0
-        console.log(index)
+      const positions = ['primera', 'segunda', 'tercera']
+      const index = positions.findIndex(position => message.includes(position)) || 0
+      if (index >= 0) {
         const voice = new SpeechSynthesisUtterance(`Entrando en la ${positions[index]}`)
         synth.speak(voice)
         const href = articles[index].shadowRoot.querySelector('x-anchor').getAttribute('href')
@@ -112,7 +115,7 @@ document.addEventListener('keydown', function (e) {
       }
 
       if (message.includes('gracias')) {
-        const voice = new SpeechSynthesisUtterance('¡Gracias a ti! Un saludo a todos los asistentes del meetup. ¡Moláis mucho!')
+        const voice = new SpeechSynthesisUtterance('¡Gracias a ti! Un saludo a todos los asistentes del mitap. ¡Moláis mucho!')
         synth.speak(voice)
         return
       }
