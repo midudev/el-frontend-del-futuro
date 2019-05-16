@@ -1,5 +1,6 @@
 import { Component } from '../main/Component.js'
 import { Link } from '../components/Link.js'
+import { Timeago } from '../components/Timeago.js'
 
 export const Article = 'x-article'
 
@@ -18,12 +19,15 @@ window.customElements.define(Article, class extends Component {
     }
 
     h4 {
-      box-sizing: border-box;
       color: #333;
       margin: 0;
       font-size: 14px;
-      padding: 4px 10px;
       text-transform: uppercase;
+    }
+    
+    header {
+      box-sizing: border-box;
+      padding: 4px 10px;
     }
     
     span {
@@ -46,14 +50,17 @@ window.customElements.define(Article, class extends Component {
   }
 
   render ({ attrs, state }) {
-    const { title, subtitle, image, id } = attrs
+    const { title, subtitle, image, id, date } = attrs
 
     return `
     <article>
       <h2><span>${title}</span></h2>
       <${Link} href='/article/${id}'>
         <img alt="image" src="/statics/articles${image}" loading="lazy" intrinsicsize="250x150" />
-        <h4>${subtitle}</h4>
+        <header>
+          <${Timeago} date="${date}"></${Timeago}>
+          <h4>${subtitle}</h4>
+        </header>
       </${Link}>
       <slot></slot>
     </article>
