@@ -39,10 +39,10 @@
     {
       "id": 1,
       "date": 155794760000,
-      "categoryId": "actualidad",
-      "subtitle": "TRUMP HA ASEGURADO QUE LAS OBRAS ESTARÁN LISTAS ANTES DE QUE ÉL ACABE CON EL MUNDO",
-      "title": "El Ayuntamiento de Nueva York inicia las obras para enterrar la Estatua de la Libertad en la playa",
-      "content": "Con la intención de que los astronautas que han salido al espacio puedan encontrarla cuando vuelvan y se den cuenta de que están en lo que un día fue su hogar, el Ayuntamiento de Nueva York ha decidido iniciar las obras para enterrar la Estatua de la Libertad en la playa lo antes posible. “La enterraremos de cintura para arriba al lado de unas rocas”, explica Bill de Blasio, alcalde de la ciudad.\n\nLa decisión llega después de comprobar que la humanidad se acerca irremediablemente a su fin, y tras ver que muchos gorilas empiezan a hablar cada vez con más fluidez. “Enterrar la Estatua de la Libertad en la arena será el perfecto broche final”, explican desde el consistorio.",
+      "categoryId": "tecnologia",
+      "subtitle": "LOS CAMBIOS CONSTANTES DE VERSIONES Y SU BOILERPLATE, ENTRE LAS RAZONES",
+      "title": "El uso de Angular en el frontend es la primera preocupación de los españoles, seguido del paro y la corrupción.",
+      "content": "Esta noticia es una broma. En realidad Angular está bien, sólo que me gustan más React y Vue! :P",
       "image": "/1.webp"
     },
     {
