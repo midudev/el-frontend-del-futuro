@@ -1,4 +1,4 @@
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 
 export const FunnySection = 'x-funny'
 

@@ -1,4 +1,4 @@
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 import { Link } from '../components/Link.js'
 
 export const Category = 'x-category'

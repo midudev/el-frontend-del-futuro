@@ -3,7 +3,7 @@ import { Categories } from '../containers/Categories.js'
 import { News } from '../containers/News.js'
 import { FunnySection } from '../components/FunnySection.js'
 
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 
 class Home extends Component {
   static get observedAttributes () { return ['id'] }
