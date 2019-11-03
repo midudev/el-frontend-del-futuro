@@ -30,10 +30,10 @@ class Article extends Component {
       })
   }
 
-  render ({ attrs, state }) {
+  render ({ state }) {
     const { article } = state
     if (!article) {
-      return `<div></div>`
+      return '<div></div>'
     }
 
     const { content, id, title, subtitle, image } = article
@@ -41,8 +41,20 @@ class Article extends Component {
     return `
       <div>
         <${Logo}></${Logo}>
-        <${SingleArticle} id="${id}" title="${title}" subtitle="${subtitle}" image="${image}"></${SingleArticle}>
-        <${Fav} id="${id}" title="${title}" image="${image}"></${Fav}>
+
+        <${SingleArticle}
+          id="${id}"
+          title="${title}"
+          subtitle="${subtitle}"
+          image="${image}">
+        </${SingleArticle}>
+
+        <${Fav}
+          id="${id}"
+          title="${title}"
+          image="${image}">
+        </${Fav}>
+
         <p>${content}</p>
       </div>
     `

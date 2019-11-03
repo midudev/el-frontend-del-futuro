@@ -76,7 +76,7 @@ class Favs extends Component {
     this.setState({ favs })
   }
 
-  render ({ attrs, state }) {
+  render ({ state }) {
     const { favs } = state
     return `
       <${Logo} with-favs-link="false"></${Logo}>
