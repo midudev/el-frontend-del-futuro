@@ -12,13 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "standard": "12.0.1"
-  },
-  "eslintConfig": {
-    "extends": ["./node_modules/standard/eslintrc.json"],
-    "globals": {
-      "HTMLElement": "readonly",
-      "customElements": "readonly"
-    }
+    "workbox-cli": "4.3.1"
   }
 }
