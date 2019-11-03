@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -27,15 +27,19 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "components/Article.js",
-    "revision": "13747bd747a71b669f77e667db3d7e93"
+    "revision": "632cb0ef2080591012cf9f74864905fa"
   },
   {
     "url": "components/Category.js",
-    "revision": "2cbb112287845dd1876a4f2123cd0e40"
+    "revision": "2bc92c71b9b5e9313e7337ed87d94eaa"
+  },
+  {
+    "url": "components/Fav.js",
+    "revision": "78f028511a2d0306e3749473d7659382"
   },
   {
     "url": "components/FunnySection.js",
-    "revision": "f7e22b5a42bd0a717c0823d6e6042d95"
+    "revision": "16cde7439780113cbe164c7ef4091e6f"
   },
   {
     "url": "components/Link.js",
@@ -43,31 +47,31 @@ self.__precacheManifest = [
   },
   {
     "url": "components/Logo.js",
-    "revision": "7280a79ee3dad87f5dbcaf1fabda3d48"
+    "revision": "632e9e7efd535ddb10bc35d0488e736a"
+  },
+  {
+    "url": "components/Timeago.js",
+    "revision": "30dd38833ddecd83090580ae4b6c83fa"
   },
   {
     "url": "containers/Categories.js",
     "revision": "3102924bf280f853b204045dd8f81c5f"
   },
   {
-    "url": "containers/ListOfVideos.js",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
-  },
-  {
     "url": "containers/News.js",
-    "revision": "51e9073be83f1d5f985ed52feb44c381"
+    "revision": "f1b006282eee2bbfa550be7bede6a0ac"
   },
   {
     "url": "index.html",
-    "revision": "15c725a5d369ce97bafe938a89dad7f3"
+    "revision": "1df3f1e290fea62df8773804789c693e"
   },
   {
     "url": "main/app.js",
-    "revision": "47cd8b238ba82b098123393d009c5553"
+    "revision": "526e5f1501a27a9554076c7d798e51a8"
   },
   {
     "url": "main/Component.js",
-    "revision": "33e5acf5771833e3ec2ce995e7e95b04"
+    "revision": "66d001494c96c26883e94ef8eb579421"
   },
   {
     "url": "main/events.js",
@@ -79,7 +83,11 @@ self.__precacheManifest = [
   },
   {
     "url": "pages/article.js",
-    "revision": "99b3abc996289dc7867395e05d48d8fe"
+    "revision": "3c925cfb8603b946271858dc85b3e302"
+  },
+  {
+    "url": "pages/favs.js",
+    "revision": "37dd027e7802238ad6a1deef69707d4c"
   },
   {
     "url": "pages/home.js",
@@ -87,15 +95,23 @@ self.__precacheManifest = [
   },
   {
     "url": "pages/videos.js",
-    "revision": "91f7cb903aa1ecb115020a6545933b32"
+    "revision": "5d8977accf9b1e1cd2b0e1e9188fe438"
   },
   {
     "url": "robots.txt",
     "revision": "f77c87f977e0fcce05a6df46c885a129"
   },
   {
+    "url": "statics/add_fav.webp",
+    "revision": "2067f9a66cabd79e2319a955db55bff6"
+  },
+  {
+    "url": "statics/articles/0.webp",
+    "revision": "9850ac7fcccc23e56f69d8d0eb9b334a"
+  },
+  {
     "url": "statics/articles/1.webp",
-    "revision": "0af01ec5991c07fec939c8524f6f092e"
+    "revision": "309e30f81d63e6034907f9165579f01e"
   },
   {
     "url": "statics/articles/10.webp",
@@ -234,8 +250,16 @@ self.__precacheManifest = [
     "revision": "708ff863eef8d3bbc9a6657c25b8e35e"
   },
   {
+    "url": "statics/remove_fav.webp",
+    "revision": "3bf191190ef8e1706dc593ba5a66b148"
+  },
+  {
     "url": "statics/robots.txt",
     "revision": "f77c87f977e0fcce05a6df46c885a129"
+  },
+  {
+    "url": "statics/see_favs.webp",
+    "revision": "11debb884a161a5dca4c3aab24cfceea"
   },
   {
     "url": "statics/video_icon.webp",
@@ -243,7 +267,7 @@ self.__precacheManifest = [
   },
   {
     "url": "workers/paint-modules.js",
-    "revision": "9cadca90bf6934ec3e125ce3ea463643"
+    "revision": "92a46cec37a96e3c6fee8bae6c03ec37"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
