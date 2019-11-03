@@ -1,4 +1,4 @@
-let cachedStorage = null
+// const cachedStorage = null
 
 const asyncLocalStorage = {
   set: function (key, value) {
@@ -14,11 +14,12 @@ const asyncLocalStorage = {
 }
 
 const getStorage = () => {
-  if (cachedStorage) return Promise.resolve(cachedStorage)
+  return asyncLocalStorage
+  // if (cachedStorage) return Promise.resolve(cachedStorage)
 
-  return import('std:kv-storage')
-    .then(storage => { cachedStorage = storage })
-    .catch(() => asyncLocalStorage)
+  // return import('std:kv-storage')
+  //   .then(storage => { cachedStorage = storage })
+  //   .catch(() => asyncLocalStorage)
 }
 
 export default {
