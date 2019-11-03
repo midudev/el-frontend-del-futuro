@@ -16,7 +16,7 @@ const asyncLocalStorage = {
 const getStorage = () => {
   if (cachedStorage) return Promise.resolve(cachedStorage)
 
-  import('std:kv-storage')
+  return import('std:kv-storage')
     .then(storage => { cachedStorage = storage })
     .catch(() => asyncLocalStorage)
 }
