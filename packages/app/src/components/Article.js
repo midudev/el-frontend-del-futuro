@@ -1,4 +1,4 @@
-import { Component } from '../main/Component'
+import { Component } from '../main/Component.js'
 import { Link } from '../components/Link.js'
 import { Timeago } from '../components/Timeago.js'
 

@@ -1,4 +1,4 @@
-import { Component } from '../main/Component'
+import { Component } from '../main/Component.js'
 
 export const Timeago = 'x-timeago'
 
@@ -20,7 +20,7 @@ window.customElements.define(Timeago, class extends Component {
     const timestamp = +attrs.date
     const articleDate = new Date(timestamp)
 
-    const rtf = new window.Intl.RelativeTimeFormat('ca', { style: 'short' })
+    const rtf = new window.Intl.RelativeTimeFormat('es', { style: 'short' })
     const diff = diffFromNow(timestamp)
     const timeago = diff > -24
       ? rtf.format(diff, 'hours')
