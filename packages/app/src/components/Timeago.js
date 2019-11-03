@@ -12,13 +12,13 @@ const diffFromNow = ts => Math.floor((ts - +Date.now()) / 1000 / 60 / 60)
 */
 window.customElements.define(Timeago, class extends Component {
   styles () {
-    return `time { color: #555; font-size: 14px; letter-spacing: 1px; }`
+    return 'time { color: #555; font-size: 14px; letter-spacing: 1px; }'
   }
 
   render ({ attrs }) {
-    if (!attrs.date || attrs.date === 'undefined') return ``
+    if (!attrs.date || attrs.date === 'undefined') return ''
     const timestamp = +attrs.date
-    const articleDate = new Date(timestamp)
+    // const articleDate = new Date(timestamp)
 
     const rtf = new window.Intl.RelativeTimeFormat('es', { style: 'short' })
     const diff = diffFromNow(timestamp)

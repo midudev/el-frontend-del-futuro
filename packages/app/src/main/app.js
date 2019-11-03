@@ -1,8 +1,7 @@
 import './polyfills.js'
-import './events.js'
+import events from './events.js'
 
 import '../components/Logo.js'
-import events from './events.js';
 
 function initRouter () {
   let actualRoute = ''
@@ -43,7 +42,7 @@ function initRouter () {
   }
 
   const checkPathAgainstRoutes = () => {
-    for (let route of routes) {
+    for (const route of routes) {
       const matchedRoute = matchRoute(route)
 
       if (matchedRoute) {
@@ -77,15 +76,15 @@ document.addEventListener('keydown', function (e) {
     const recognition = new webkitSpeechRecognition()
 
     recognition.lang = 'es-ES'
-    recognition.onresult = function(e) {
-      const { transcript: message, confidence} = e.results[0][0]
+    recognition.onresult = function (e) {
+      const { transcript: message, confidence } = e.results[0][0]
       console.log(e.results)
-      console.log("👂 Lo que me ha entendido es: " + message)
-      console.log("Con una confianza de: " + confidence)
-      
+      console.log('👂 Lo que me ha entendido es: ' + message)
+      console.log('Con una confianza de: ' + confidence)
+
       let articles
       try {
-        articles = Array.from(document.querySelector("x-pages-home").shadowRoot.querySelector("x-news").shadowRoot.querySelectorAll("x-article")).slice(0, 2)
+        articles = Array.from(document.querySelector('x-pages-home').shadowRoot.querySelector('x-news').shadowRoot.querySelectorAll('x-article')).slice(0, 2)
       } catch (e) {}
 
       if (message.includes('las noticias')) {
@@ -117,7 +116,6 @@ document.addEventListener('keydown', function (e) {
       if (message.includes('gracias')) {
         const voice = new SpeechSynthesisUtterance('¡Gracias a ti! Un saludo a todos los asistentes del mitap. ¡Moláis mucho!')
         synth.speak(voice)
-        return
       }
     }
     recognition.start()

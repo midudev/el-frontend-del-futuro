@@ -21,7 +21,7 @@ export class Component extends HTMLElement {
   }
 
   getAllAttributes () {
-    let attrs = {}
+    const attrs = {}
     if (this.hasAttributes()) {
       for (var i = this.attributes.length - 1; i >= 0; i--) {
         const { name, value } = this.attributes[i]

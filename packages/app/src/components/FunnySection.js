@@ -55,7 +55,7 @@ window.customElements.define(FunnySection, class extends Component {
     const { show } = state
 
     if (!show) {
-      return `<div></div>`
+      return '<div></div>'
     }
 
     return `

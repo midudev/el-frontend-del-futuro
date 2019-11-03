@@ -64,9 +64,14 @@ window.customElements.define('x-categories', class extends Component {
 
     return (
       `<ul>${categories.map(
-        ({ active, emoji, id, image }) => (
+        ({ emoji, id, image }) => (
           `<li>
-              <${Category} id="${id}" ${this.isSelected({ id, selected }) ? 'active' : ''} emoji="${emoji}" title="${id}" image="${image}"></${Category}>
+              <${Category}
+                id="${id}" ${this.isSelected({ id, selected }) ? 'active' : ''}
+                emoji="${emoji}"
+                title="${id}"
+                image="${image}">
+              </${Category}>
             <li>`
         )).join('')}
     </ul>`)

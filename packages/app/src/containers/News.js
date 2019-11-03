@@ -8,7 +8,7 @@ window.customElements.define(News, class extends Component {
   static get observedAttributes () { return ['selected'] }
 
   styles () {
-    return `div { min-height: 100vh }`
+    return 'div { min-height: 100vh }'
   }
 
   attributeChangedCallback () {
@@ -36,7 +36,13 @@ window.customElements.define(News, class extends Component {
         .filter(singleNews => singleNews.categoryId === selected || selected === 'undefined')
         .map(
           ({ date, id, title, subtitle, content, image }) => (
-            `<${Article} id="${id}" date="${date}" title="${title}" subtitle="${subtitle}" image="${image}"></${Article}>`
+            `<${Article}
+              date="${date}"
+              id="${id}"
+              image="${image}"
+              subtitle="${subtitle}"
+              title="${title}">
+            </${Article}>`
           )).join('')}</div>`)
   }
 })
