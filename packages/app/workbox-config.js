@@ -1,9 +1,9 @@
 module.exports = {
-  'globDirectory': 'src/',
-  'globPatterns': [
+  globDirectory: 'src/',
+  globPatterns: [
     '**/*.{js,html,txt,webp,gif,jpg,webm,png,ico,svg,json}'
   ],
-  'swDest': 'src/workers/sw.js',
+  swDest: 'src/workers/sw.js',
 
   runtimeCaching: [{
     urlPattern: /\.(?:js,html,txt,webp,gif,jpg,webm,png,ico,svg,json)$/,
