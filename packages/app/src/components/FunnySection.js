@@ -1,4 +1,4 @@
-import { Component } from '../main/Component'
+import { Component } from '../main/Component.js'
 
 export const FunnySection = 'x-funny'
 
