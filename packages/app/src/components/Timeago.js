@@ -1,4 +1,4 @@
-import { Component } from 'miduReact'
+import { Component } from '../main/Component'
 
 export const Timeago = 'x-timeago'
 

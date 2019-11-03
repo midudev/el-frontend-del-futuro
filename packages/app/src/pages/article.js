@@ -2,7 +2,7 @@ import { Logo } from '../components/Logo.js'
 import { Article as SingleArticle } from '../components/Article.js'
 import { Fav } from '../components/Fav.js'
 
-import { Component } from 'miduReact'
+import { Component } from '../main/Component.js'
 
 class Article extends Component {
   styles () {
