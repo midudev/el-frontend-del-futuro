@@ -20,9 +20,15 @@
   },
   "homepage": "https://github.com/midudev/el-frontend-del-futuro#readme",
   "devDependencies": {
-    "@s-ui/mono": "^1.41.0"
+    "standard": "14.3.1"
   },
-  "dependencies": {
-    "json-server": "^0.14.2"
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "globals": {
+      "HTMLElement": "readonly",
+      "customElements": "readonly"
+    }
   }
 }
