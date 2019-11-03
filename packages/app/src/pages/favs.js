@@ -3,7 +3,7 @@ import { storage } from 'std:kv-storage'
 import { Logo } from '../components/Logo.js'
 import { Link } from '../components/Link.js'
 
-import { Component } from 'miduReact'
+import { Component } from '../main/Component.js'
 
 class Favs extends Component {
   styles () {
