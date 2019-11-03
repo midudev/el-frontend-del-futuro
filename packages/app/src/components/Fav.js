@@ -1,4 +1,4 @@
-import storage from '../main/storage'
+import storage from '../main/storage.js'
 
 export const Fav = 'x-fav'
 

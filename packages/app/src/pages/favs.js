@@ -1,4 +1,4 @@
-import storage from '../main/storage'
+import storage from '../main/storage.js'
 
 import { Logo } from '../components/Logo.js'
 import { Link } from '../components/Link.js'
