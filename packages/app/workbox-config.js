@@ -3,7 +3,7 @@ module.exports = {
   globPatterns: [
     '**/*.{js,html,txt,webp,gif,jpg,webm,png,ico,svg,json}'
   ],
-  swDest: 'src/workers/sw.js',
+  swDest: 'src/sw.js',
 
   runtimeCaching: [{
     urlPattern: /\.(?:js,html,txt,webp,gif,jpg,webm,png,ico,svg,json)$/,

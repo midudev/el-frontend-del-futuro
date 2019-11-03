@@ -17,7 +17,7 @@
     },
     {"src": "/(statics|components|containers|main|pages|workers)/(.*)", "dest": "/packages/app/src/$1/$2"},
     {"src": "/robots.txt", "dest": "/packages/app/src/statics/robots.txt"},
-    {"src": "/sw.js", "dest": "/packages/app/src/workers/sw.js"},
+    {"src": "/sw.js", "dest": "/packages/app/src/sw.js"},
     {"src": "/.*", "dest": "/packages/app/src/index.html"}
   ]
 }
