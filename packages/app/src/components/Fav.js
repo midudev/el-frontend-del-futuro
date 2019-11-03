@@ -1,4 +1,4 @@
-import { storage } from 'std:kv-storage'
+import storage from '../main/storage'
 
 export const Fav = 'x-fav'
 

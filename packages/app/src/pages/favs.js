@@ -1,4 +1,4 @@
-import { storage } from 'std:kv-storage'
+import storage from '../main/storage'
 
 import { Logo } from '../components/Logo.js'
 import { Link } from '../components/Link.js'
