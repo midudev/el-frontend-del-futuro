@@ -18,7 +18,7 @@ window.customElements.define(Timeago, class extends Component {
   render ({ attrs }) {
     if (!attrs.date || attrs.date === 'undefined') return ''
     const timestamp = +attrs.date
-    // const articleDate = new Date(timestamp)
+    // const timeago = new Date(timestamp)
 
     const rtf = new window.Intl.RelativeTimeFormat('es', { style: 'short' })
     const diff = diffFromNow(timestamp)
