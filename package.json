@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:api": "node packages/api/index.js",
-    "start:app": "serve -s packages/app/src",
+    "start:app": "serve -s ./packages/app/src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,16 +20,26 @@
   },
   "homepage": "https://github.com/midudev/el-frontend-del-futuro#readme",
   "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "eslint-plugin-babel": "5.3.0",
     "serve": "11.2.0",
     "standard": "14.3.1"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "babel"
+    ],
     "extends": [
       "./node_modules/standard/eslintrc.json"
     ],
     "globals": {
       "HTMLElement": "readonly",
       "customElements": "readonly"
+    },
+    "rules": {
+      "no-unused-expressions": 0,
+      "babel/no-unused-expressions": 1
     }
   }
 }
