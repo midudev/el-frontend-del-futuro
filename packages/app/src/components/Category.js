@@ -7,8 +7,8 @@ window.customElements.define(Category, class extends Component {
   static get observedAttributes () { return ['active'] }
 
   attributeChangedCallback (name, oldValue, newValue) {
-    const el = this.shadowRoot.querySelector('slot').assignedNodes({ flatten: true })[0]
-    newValue === null
+    const el = this.shadowRoot.querySelector(Link)
+    return newValue === null
       ? el.removeAttribute('active')
       : el.setAttribute('active', '')
   }
