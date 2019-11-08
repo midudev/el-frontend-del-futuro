@@ -3,22 +3,16 @@ import { Component } from '../main/Component.js'
 
 export const Categories = 'x-categories'
 
-window.customElements.define('x-categories', class extends Component {
+window.customElements.define(Categories, class extends Component {
   static get observedAttributes () { return ['selected'] }
 
   attributeChangedCallback (name, oldValue, newValue) {
-    const ul = this.shadowRoot.querySelector('slot').assignedNodes({ flatten: true })[0]
-    const activeLi = ul.querySelectorAll('[active]')
+    const ul = this.shadowRoot.querySelector('ul')
 
-    if (activeLi.length > 0) {
-      activeLi.forEach(element => element.removeAttribute('active'))
-      const categoryElement = ul.querySelector(`[id="${newValue}"]`)
-      if (categoryElement) {
-        categoryElement.setAttribute('active', '')
-      } else {
-        ul.querySelectorAll(Category).forEach(el => el.setAttribute('active', ''))
-      }
-    }
+    ul.querySelectorAll(Category)
+      .forEach(el => el.removeAttribute('active'))
+
+    ul.querySelector(`[id="${newValue}"]`)?.setAttribute('active', '')
   }
 
   getInitialState () {
@@ -46,16 +40,14 @@ window.customElements.define('x-categories', class extends Component {
     `
   }
 
-  connectedCallback () {
-    window.fetch('https://el-frontend-del-futuro-api.midudev.now.sh/categories')
-      .then(res => res.json())
-      .then(categories => {
-        this.setState({ categories })
-      })
+  async connectedCallback () {
+    const categories = await this.services.getCategories()
+    this.setState({ categories })
   }
 
   isSelected ({ id, selected }) {
-    return selected === id || selected === 'undefined'
+    const isSelected = selected === id || selected === 'undefined'
+    return isSelected ? 'active' : ''
   }
 
   render ({ attrs, state }) {
@@ -67,7 +59,7 @@ window.customElements.define('x-categories', class extends Component {
         ({ emoji, id, image }) => (
           `<li>
               <${Category}
-                id="${id}" ${this.isSelected({ id, selected }) ? 'active' : ''}
+                id="${id}" ${this.isSelected({ id, selected })}
                 emoji="${emoji}"
                 title="${id}"
                 image="${image}">
