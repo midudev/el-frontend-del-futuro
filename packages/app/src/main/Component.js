@@ -1,18 +1,18 @@
+import services from '../services/index.js'
+
 // ⚛️ My own React powered by Web Components!
 export class Component extends HTMLElement {
   constructor () {
     super()
 
     this.attachShadow({ mode: 'open' })
-    const styles = typeof this.styles === 'function'
-      ? `<style>${this.styles()}</style>`
-      : ''
-
-    this.shadowRoot.innerHTML = `${styles}<slot id="render"></slot>`
 
     this.state = typeof this.getInitialState === 'function'
       ? this.getInitialState()
       : {}
+
+    // inject services to be used in every component
+    this.services = services
 
     this._render({
       attrs: this.getAllAttributes(),
@@ -20,30 +20,34 @@ export class Component extends HTMLElement {
     })
   }
 
+  _render ({ attrs, state }) {
+    const styles = this.getStyles()
+    const content = this.render({ attrs, state })
+    this.shadowRoot.innerHTML = `${styles}${content}`
+  }
+
   getAllAttributes () {
     const attrs = {}
-    if (this.hasAttributes()) {
-      for (var i = this.attributes.length - 1; i >= 0; i--) {
-        const { name, value } = this.attributes[i]
-        attrs[name] = value
-      }
-      return attrs
-    } else {
-      return attrs
+    for (var i = this.attributes.length - 1; i >= 0; i--) {
+      const { name, value } = this.attributes[i]
+      attrs[name] = value
     }
+    return attrs
+  }
+
+  getStyles () {
+    return typeof this.styles === 'function'
+      ? `<style>${this.styles()}</style>`
+      : ''
   }
 
   setState (newState) {
-    this.state = Object.assign({}, this.state, newState)
-    this._render({ attrs: this.getAllAttributes(), state: this.state })
+    this.state = { ...this.state, ...newState }
+    this.update()
   }
 
   render () {
     throw new Error('render must be defined')
-  }
-
-  _render ({ attrs, state }) {
-    this.shadowRoot.querySelector('#render').innerHTML = this.render({ attrs, state })
   }
 
   update () {
