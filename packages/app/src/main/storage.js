@@ -3,12 +3,12 @@
 const asyncLocalStorage = {
   set: function (key, value) {
     return Promise.resolve().then(function () {
-      window.localStorage.setItem(key, value)
+      window.localStorage.setItem(key, JSON.stringify(value))
     })
   },
   get: function (key) {
     return Promise.resolve().then(function () {
-      return window.localStorage.getItem(key)
+      return JSON.parse(window.localStorage.getItem(key))
     })
   }
 }
