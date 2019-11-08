@@ -9,7 +9,9 @@ window.customElements.define(Link, class extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' })
     const href = this.getAttribute('href')
 
-    shadowRoot.innerHTML = `<style>a {text-decoration: none;}</style><a href='${href}'><slot></slot></a>`
+    shadowRoot.innerHTML = `
+    <style>a {text-decoration: none;}</style>
+    <a href='${href}'><slot></slot></a>`
 
     shadowRoot.querySelector('a').addEventListener('click', function (e) {
       e.preventDefault()
