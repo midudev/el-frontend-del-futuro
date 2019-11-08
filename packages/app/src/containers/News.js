@@ -19,12 +19,9 @@ window.customElements.define(News, class extends Component {
     return { news: [] }
   }
 
-  connectedCallback () {
-    window.fetch('https://el-frontend-del-futuro-api.midudev.now.sh/news')
-      .then(res => res.json())
-      .then(news => {
-        this.setState({ news })
-      })
+  async connectedCallback () {
+    const news = await this.services.getNews()
+    this.setState({ news })
   }
 
   render ({ attrs, state }) {
