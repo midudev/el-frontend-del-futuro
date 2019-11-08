@@ -35,7 +35,7 @@ window.customElements.define(FunnySection, class extends Component {
   }
 
   connectedCallback () {
-    const el = this.shadowRoot.querySelector('slot').assignedNodes({ flatten: true })[0]
+    const el = this.shadowRoot.querySelector('div')
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         // Update our state when observer callback fires
@@ -58,8 +58,7 @@ window.customElements.define(FunnySection, class extends Component {
       return '<div></div>'
     }
 
-    return `
-    <div>
+    return `<div>
       <h3>😆Funny slider! 🤣</h3>
       <section>
         <video controls src='https://i.imgur.com/lcgsSti.mp4'></video>
