@@ -32,8 +32,7 @@ class Videos extends Component {
   }
 
   connectedCallback () {
-    const buttons = this.shadowRoot.querySelector('slot').assignedNodes({ flatten: true })[0]
-    buttons.querySelectorAll('button').forEach(function (el) {
+    this.shadowRoot.querySelectorAll('button').forEach(function (el) {
       el.addEventListener('click', async function () {
         // get the video, that is the previous element
         const video = el.previousSibling
