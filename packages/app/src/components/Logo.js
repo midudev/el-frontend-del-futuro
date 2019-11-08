@@ -26,7 +26,10 @@ window.customElements.define(Logo, class extends Component {
   }
 
   render ({ attrs }) {
-    let { 'with-video-link': withVideoLink, 'with-favs-link': withFavsLink } = attrs
+    let {
+      'with-video-link': withVideoLink,
+      'with-favs-link': withFavsLink
+    } = attrs
     withVideoLink = withVideoLink !== 'false'
     withFavsLink = withFavsLink !== 'false'
 
