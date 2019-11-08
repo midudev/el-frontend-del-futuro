@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/midudev/el-frontend-del-futuro#readme",
   "devDependencies": {
+    "serve": "11.2.0",
     "standard": "14.3.1"
   },
   "eslintConfig": {
