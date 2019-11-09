@@ -1,5 +1,3 @@
-import events from '../main/events.js'
-
 export const Link = 'x-anchor'
 
 window.customElements.define(Link, class extends HTMLElement {
@@ -16,7 +14,6 @@ window.customElements.define(Link, class extends HTMLElement {
     shadowRoot.querySelector('a').addEventListener('click', function (e) {
       e.preventDefault()
       window.history.pushState({}, '', href)
-      events.emit('navigation')
     })
   }
 })
