@@ -6,6 +6,11 @@
       "emoji": "📰"
     },
     {
+      "id": "tecnologia",
+      "image": "/statics/category_tecnologia.webp",
+      "emoji": "🚀"
+    },
+    {
       "id": "economia",
       "image": "/statics/category_economia.webp",
       "emoji": "💶"
@@ -14,11 +19,6 @@
       "id": "cultura",
       "image": "/statics/category_cultura.webp",
       "emoji": "📖"
-    },
-    {
-      "id": "tecnologia",
-      "image": "/statics/category_tecnologia.webp",
-      "emoji": "🚀"
     },
     {
       "id": "deportes",
@@ -32,7 +32,7 @@
       "date": 1558020000000,
       "categoryId": "actualidad",
       "subtitle": "Tras el descubrimiento de una crema rejuvenecedora que está triunfando entre las patatas",
-      "title": "LAS PAPAS ARRUGADAS EMPIEZAN A EXTINGUIRSE",
+      "title": "Las papas arrugadas se encuentran en peligro de extinción",
       "content": "En las Islas Canarias ya están buscando posibles sustitutos a este manjar. Entre los mejor colocados están los tomates chafaos y los boniatos fruncidos. La batalla se presenta muy interesante y se espera que el cambio de moda ocurra antes de la desaparición de las papas arrugadas.",
       "image": "/0.webp"
     },
@@ -41,7 +41,7 @@
       "date": 1557947608000,
       "categoryId": "tecnologia",
       "subtitle": "LOS CAMBIOS CONSTANTES DE VERSIONES Y SU BOILERPLATE, ENTRE LAS RAZONES",
-      "title": "El uso de Angular en el frontend es la primera preocupación de los españoles, seguido del paro y la corrupción.",
+      "title": "El uso de Angular en el frontend es la primera preocupación de los españoles, seguido del paro y la corrupción",
       "content": "Los españoles consideran que este framework debería ser ilegalizado ya que está contribuyendo a que grupos violentos empiecen a lanzar piedras en las diferentes conferencias del territorio nacional.",
       "image": "/1.webp"
     },
@@ -53,6 +53,15 @@
       "subtitle": "También han tenido que dejar de multiplicar y ya solo pueden dividir",
       "image": "/7.webp",
       "content": "Después de años recibiendo cada vez menos financiación, los matemáticos han tenido que empezar a poner anuncios en el número Pi cada diez cifras para luchar contra los recortes en Ciencia. “También empezaremos a poner nombres de marcas en los problemas de los libros, cuya solución será siempre comprar más”, reconoce Andrés Comesaña, de la Universidad de Vigo.\n\nAsí, a partir de esta semana, el número Pi será 3 coma 14, 15, 92, 65, 35, Carglass Cambia, Carglass repara, 89, 79… y así hasta el infinito. “Era esto o nada”, se confiesa Comesaña. “Muchos matemáticos ya solo podían hacer operaciones con números negativos”, denuncia. Gracias a un acuerdo comercial, el número Pi pronto pasará a llamarse número Powerade. “La gente no tardará en acostumbrarse y al final será prácticamente lo mismo”, afirma."
+    },
+    {
+      "id": 9,
+      "date": 1557947610000,
+      "categoryId": "economia",
+      "title": "Gracias a la llegada de China, la Luna abrirá también los domingos",
+      "subtitle": "ES UN PEQUEÑO PASO PARA UN CHINO, PERO UN GRAN PASO PARA EL SECTOR DE ALIMENTACIÓN, BAZAR Y FRUTOS SECOS",
+      "image": "/9.webp",
+      "content": "El pasado tres de enero, la sonda china Chang’e 4 se convirtió en el primer objeto artificial que logra alunizar en la cara oculta de la Luna. Esta nueva conquista del gigante asiático, calificada por el Global Times como “un gran hito de la exploración humana del universo”, permitirá que nuestro satélite permanezca abierto todos los días de la semana, domingos incluidos.\n\n“Es un pequeño paso para un chino, pero un gran paso para el B.A.F”, declaró el presidente Xi Jinping, definiendo con esas siglas el sector “Bazar, Alimentación y Frutos secos”, que trasciende por vez primera las fronteras terrestres. “La República Popular China no se detendrá hasta que todo el Sistema Solar abra las veinticuatro horas, o las 9’84 horas en el caso de Júpiter, o las 10’8 horas en el caso de Saturno”, añadió a continuación."
     },
     {
       "id": 2,
@@ -107,15 +116,6 @@
       "subtitle": "Creen que tras los buenos resultados en Liga, merecen una segunda oportunidad",
       "image": "/8.webp",
       "content": "Los jugadores del Real Madrid están convencidos de que hoy juegan partido de Champions. El Leganés pondrá el himno de esa competición para no romperles la ilusión."
-    },
-    {
-      "id": 9,
-      "date": 1557947610000,
-      "categoryId": "economia",
-      "title": "Gracias a la llegada de China, la Luna abrirá también los domingos",
-      "subtitle": "ES UN PEQUEÑO PASO PARA UN CHINO, PERO UN GRAN PASO PARA EL SECTOR DE ALIMENTACIÓN, BAZAR Y FRUTOS SECOS",
-      "image": "/9.webp",
-      "content": "El pasado tres de enero, la sonda china Chang’e 4 se convirtió en el primer objeto artificial que logra alunizar en la cara oculta de la Luna. Esta nueva conquista del gigante asiático, calificada por el Global Times como “un gran hito de la exploración humana del universo”, permitirá que nuestro satélite permanezca abierto todos los días de la semana, domingos incluidos.\n\n“Es un pequeño paso para un chino, pero un gran paso para el B.A.F”, declaró el presidente Xi Jinping, definiendo con esas siglas el sector “Bazar, Alimentación y Frutos secos”, que trasciende por vez primera las fronteras terrestres. “La República Popular China no se detendrá hasta que todo el Sistema Solar abra las veinticuatro horas, o las 9’84 horas en el caso de Júpiter, o las 10’8 horas en el caso de Saturno”, añadió a continuación."
     },
     {
       "id": 10,
