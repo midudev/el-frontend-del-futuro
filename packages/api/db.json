@@ -31,8 +31,8 @@
       "id": 0,
       "date": 1558020000000,
       "categoryId": "actualidad",
-      "subtitle": "LAS PAPAS ARRUGADAS EMPIEZAN A EXTINGUIRSE",
-      "title": "Tras el descubrimiento de una crema rejuvenecedora que está triunfando entre las patatas",
+      "subtitle": "Tras el descubrimiento de una crema rejuvenecedora que está triunfando entre las patatas",
+      "title": "LAS PAPAS ARRUGADAS EMPIEZAN A EXTINGUIRSE",
       "content": "En las Islas Canarias ya están buscando posibles sustitutos a este manjar. Entre los mejor colocados están los tomates chafaos y los boniatos fruncidos. La batalla se presenta muy interesante y se espera que el cambio de moda ocurra antes de la desaparición de las papas arrugadas.",
       "image": "/0.webp"
     },
@@ -42,7 +42,7 @@
       "categoryId": "tecnologia",
       "subtitle": "LOS CAMBIOS CONSTANTES DE VERSIONES Y SU BOILERPLATE, ENTRE LAS RAZONES",
       "title": "El uso de Angular en el frontend es la primera preocupación de los españoles, seguido del paro y la corrupción.",
-      "content": "Esta noticia es una broma. En realidad Angular está bien, sólo que me gustan más React y Vue! :P",
+      "content": "Los españoles consideran que este framework debería ser ilegalizado ya que está contribuyendo a que grupos violentos empiecen a lanzar piedras en las diferentes conferencias del territorio nacional.",
       "image": "/1.webp"
     },
     {
