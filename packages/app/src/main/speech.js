@@ -1,5 +1,3 @@
-import events from './events.js'
-
 const { speechSynthesis: synth } = window.speechSynthesis
 
 document.addEventListener('keydown', function (e) {
@@ -38,7 +36,7 @@ document.addEventListener('keydown', function (e) {
         synth.speak(voice)
         const href = articles[index].shadowRoot.querySelector('x-anchor').getAttribute('href')
         window.history.pushState({}, '', href)
-        events.emit('navigation')
+        // events.emit('navigation')
         const againVoice = new SpeechSynthesisUtterance('¿Te puedo ayudar en algo más?')
         synth.speak(againVoice)
         return

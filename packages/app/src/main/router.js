@@ -1,4 +1,13 @@
-import events from './events.js'
+// 🐵-patch pushState, DON'T DO THIS AT HOME
+(function (history) {
+  const { pushState } = history
+  history.pushState = (...args) => {
+    pushState.apply(history, args)
+    if (typeof history.onpushstate === 'function') {
+      history.onpushstate()
+    }
+  }
+})(window.history)
 
 const ROUTES = [
   {
@@ -65,8 +74,7 @@ export const initializeRouter = ({ routerId = 'router' } = {}) => {
   const checkPathAgainstRoutes = createCheckPathAgainstRoutes({ routerEl })
   // check path for the first time
   checkPathAgainstRoutes()
-  // and then check the path everytime we do a navigation
-  events.on('navigation', checkPathAgainstRoutes)
-  // and when the onpopstate fires
+  // and when the and onpushstate or onpopstate fires
+  window.history.onpushstate = checkPathAgainstRoutes
   window.onpopstate = checkPathAgainstRoutes
 }
