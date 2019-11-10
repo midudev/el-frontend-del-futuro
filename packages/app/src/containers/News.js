@@ -30,7 +30,9 @@ window.customElements.define(News, class extends Component {
 
     return (
       `<div>${news
-        .filter(singleNews => singleNews.categoryId === selected || selected === 'undefined')
+        .filter(singleNews =>
+          singleNews.categoryId === selected || selected === 'undefined'
+        )
         .map(
           ({ date, id, title, subtitle, content, image }) => (
             `<${Article}
