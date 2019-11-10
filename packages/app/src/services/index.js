@@ -1,5 +1,9 @@
+const isDev = window.location.host.includes('localhost')
+
 export const CONFIG = {
-  API: 'https://el-frontend-del-futuro-api.midudev.now.sh'
+  API: isDev
+    ? 'http://localhost:3000'
+    : 'https://el-frontend-del-futuro-api.midudev.now.sh'
 }
 
 const importService = serviceName => async params => {
@@ -8,6 +12,10 @@ const importService = serviceName => async params => {
 }
 
 export default {
+  getArticleBy: importService`getArticleBy`,
   getCategories: importService`getCategories`,
-  getNews: importService`getNews`
+  getFavs: importService`getFavs`,
+  getFunnyContent: importService`getFunnyContent`,
+  getNews: importService`getNews`,
+  setFavs: importService`setFavs`
 }
