@@ -27,11 +27,10 @@ window.customElements.define(FunnySection, class extends Component {
       overflow-x: scroll;
       overflow-y: hidden;
 
-      scroll-snap-type: x mandatory;
     }
 
     img, video {
-      scroll-snap-align: center;
+
       height: 100%;
       object-fit: cover;
       width: 80%;
