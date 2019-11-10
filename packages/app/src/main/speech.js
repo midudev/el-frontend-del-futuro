@@ -11,6 +11,7 @@ document.addEventListener('keydown', function (e) {
 
     recognition.lang = 'es-ES'
     recognition.onresult = function (e) {
+      console.log('yes')
       const { transcript: message, confidence } = e.results[0][0]
       console.log(e.results)
       console.log('👂 Lo que me ha entendido es: ' + message)

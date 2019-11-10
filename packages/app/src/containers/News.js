@@ -1,5 +1,5 @@
 import '../components/Category.js'
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 import { Article } from '../components/Article.js'
 
 export const News = 'x-news'

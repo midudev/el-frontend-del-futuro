@@ -1,5 +1,5 @@
 import { Article as SingleArticle } from '../components/Article.js'
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 
 class Article extends Component {
   styles () {

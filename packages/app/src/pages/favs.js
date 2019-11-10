@@ -1,5 +1,5 @@
 import { Link } from '../components/Link.js'
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 
 class Favs extends Component {
   styles () {

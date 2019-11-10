@@ -1,4 +1,4 @@
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 import { Link } from '../components/Link.js'
 
 const DEFAULT_IMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88x8AAt0B7bEE+qwAAAAASUVORK5CYII='

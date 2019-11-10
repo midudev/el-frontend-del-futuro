@@ -1,4 +1,4 @@
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 
 export const FunnySection = 'x-funny'
 
@@ -26,10 +26,11 @@ window.customElements.define(FunnySection, class extends Component {
       justify-content: start;
       overflow-x: scroll;
       overflow-y: hidden;
-
+      scroll-snap-type: x mandatory;
     }
 
     img, video {
+      scroll-snap-align: center;
 
       height: 100%;
       object-fit: cover;

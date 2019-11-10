@@ -1,4 +1,4 @@
-import { Component } from '../main/Component.js'
+import { Component } from 'miduReact'
 import { Router } from './Router.js'
 import { Logo } from './Logo.js'
 
