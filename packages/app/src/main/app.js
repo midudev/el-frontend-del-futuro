@@ -1,6 +1,5 @@
 import './polyfills.js'
 import './speech.js'
-import { initializeRouter } from './router.js'
-import '../components/Logo.js'
+import { App } from '../components/App.js'
 
-initializeRouter()
+document.getElementById('app').innerHTML = `<${App}></${App}`
