@@ -1,6 +1,10 @@
 import { Component } from '../main/Component.js'
 import { Link } from '../components/Link.js'
 
+const DEFAULT_IMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88x8AAt0B7bEE+qwAAAAASUVORK5CYII='
+
+const isUndefined = c => typeof c === 'undefined' || c === 'undefined'
+
 export const Category = 'x-category'
 
 window.customElements.define(Category, class extends Component {
@@ -22,9 +26,10 @@ window.customElements.define(Category, class extends Component {
       opacity: .3;
       text-align: center;
       text-decoration: none;
+      transition: opacity .3s;
       width: 75px;
     }
-    ${Link}[active] {
+    ${Link}[active], ${Link}[active] span {
       opacity: 1;
     }
     ${Link}[active] img {
@@ -33,10 +38,11 @@ window.customElements.define(Category, class extends Component {
     span {
       display: block;
       text-align: center;
+      opacity: .3;
     }
     img {
-      border: 1px solid #ddd;
-      box-shadow: 0px 10px 14px #00000033;
+      transition: filter .3s ease;
+      box-shadow: 0px 10px 14px #00000022;
       border-radius: 50%;
       height: auto;
       filter: grayscale(1);
@@ -49,11 +55,13 @@ window.customElements.define(Category, class extends Component {
 
   render ({ attrs }) {
     const { active, id, emoji, image, title = '' } = attrs
-    const isActive = typeof active !== 'undefined'
+    const isActive = !isUndefined(active)
+    const showEmoji = !isUndefined(emoji)
+    const imageToShow = isUndefined(image) ? DEFAULT_IMAGE : image
 
     return `<${Link} ${isActive ? 'active' : ''} href='/category/${id}'">
-      <img alt="${title}" src="${image}">
-      <span>${emoji}</span>
+      <img alt="${title}" src="${imageToShow}">
+      ${showEmoji ? `<span>${emoji}</span>` : ''}
     </${Link}>`
   }
 })
