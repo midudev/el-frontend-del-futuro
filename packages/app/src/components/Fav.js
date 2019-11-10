@@ -1,45 +1,44 @@
-import storage from '../main/storage.js'
+import { Component } from '../main/Component.js'
 
 export const Fav = 'x-fav'
 
 const ADD_IMG = '/statics/add_fav.webp'
 const REMOVE_IMG = '/statics/remove_fav.webp'
 
-window.customElements.define(Fav, class extends HTMLElement {
-  constructor () {
-    super()
-
-    this._shadowRoot = this.attachShadow({ mode: 'open' })
+window.customElements.define(Fav, class extends Component {
+  styles () {
+    return `
+    <style>
+      button {
+        background: transparent;
+        border: 0;
+        padding: 0 16px 16px;
+        float: right
+      }
+    </style>
+    `
   }
 
   async connectedCallback () {
     const id = this.getAttribute('id')
-    const title = this.getAttribute('title')
-    const image = this.getAttribute('image')
-
     const { hasFav } = await this.getFavs(id)
+    this.setState({ hasFav })
 
-    this._shadowRoot.innerHTML = `
-    <style>
-      button {background: transparent; border: 0; padding: 0 16px 16px; float: right}
-    </style>
-    <button>
-    <img src="${this.getImage(hasFav)}" alt='fav icon' />
-    </button>`
+    this.shadowRoot.addEventListener('click', this.toggleFav)
+  }
 
-    this._shadowRoot.querySelector('button').addEventListener('click', async e => {
-      e.preventDefault()
+  toggleFav = async (e) => {
+    e.preventDefault()
 
-      const { favs, hasFav } = await this.getFavs(id)
+    const { id, title, image } = this.getAllAttributes()
+    const { favs, hasFav } = await this.getFavs(id)
 
-      this._shadowRoot.querySelector('img').setAttribute('src', this.getImage(!hasFav))
+    const newFavs = hasFav
+      ? favs.filter(fav => fav.id !== id)
+      : [...favs, { id, title, image }]
 
-      const newFavs = hasFav
-        ? favs.filter(fav => fav.id !== id)
-        : [...favs, { id, title, image }]
-
-      await storage.set('favs', newFavs)
-    })
+    await this.services.setFavs(newFavs)
+    this.setState({ hasFav })
   }
 
   getImage (hasFav) {
@@ -47,8 +46,16 @@ window.customElements.define(Fav, class extends HTMLElement {
   }
 
   async getFavs (id) {
-    const favs = await storage.get('favs') || []
+    const favs = await this.services.getFavs()
     const hasFav = favs.some(fav => fav.id === id)
     return { favs, hasFav }
+  }
+
+  render ({ attrs, state }) {
+    const { hasFav } = state
+
+    return `<button>
+      <img src='${this.getImage(hasFav)}' alt='fav icon' />
+    </button>`
   }
 })
