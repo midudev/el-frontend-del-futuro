@@ -8,15 +8,19 @@ window.customElements.define(Categories, class extends Component {
 
   attributeChangedCallback (name, oldValue, newValue) {
     const ul = this.shadowRoot.querySelector('ul')
+    const allCategories = ul.querySelectorAll(Category)
+    const activateEl = el => el?.setAttribute('active', '')
 
-    ul.querySelectorAll(Category)
-      .forEach(el => el.removeAttribute('active'))
-
-    ul.querySelector(`[id="${newValue}"]`)?.setAttribute('active', '')
+    if (newValue !== 'undefined') {
+      allCategories.forEach(el => el.removeAttribute('active'))
+      activateEl(ul.querySelector(`[id="${newValue}"]`))
+    } else {
+      allCategories.forEach(activateEl)
+    }
   }
 
   getInitialState () {
-    return { categories: [] }
+    return { categories: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }] }
   }
 
   styles () {
@@ -56,7 +60,7 @@ window.customElements.define(Categories, class extends Component {
 
     return (
       `<ul>${categories.map(
-        ({ emoji, id, image }) => (
+        ({ emoji = '.', id, image }) => (
           `<li>
               <${Category}
                 id="${id}" ${this.isSelected({ id, selected })}
