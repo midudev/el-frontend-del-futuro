@@ -1,8 +1,4 @@
-import storage from '../main/storage.js'
-
-import { Logo } from '../components/Logo.js'
 import { Link } from '../components/Link.js'
-
 import { Component } from '../main/Component.js'
 
 class Favs extends Component {
@@ -72,23 +68,22 @@ class Favs extends Component {
   }
 
   async connectedCallback () {
-    const favs = await storage.get('favs') || []
+    const favs = await this.services.getFavs()
     this.setState({ favs })
   }
 
   render ({ state }) {
     const { favs } = state
     return `
-      <${Logo} with-favs-link="false"></${Logo}>
-        <p><img src="/statics/see_favs.webp" alt="favs icon"></p>
-        ${favs.length === 0 ? '<p>😶<br />No tienes todavía favoritos. ¡Dale caña!</p>' : ''}
-        ${favs.map(fav => `
-          <${Link} href='/article/${fav.id}'>
-            <article>
-              <div style="background-image: url('/statics/articles${fav.image}')"></div>
-              <h3>${fav.title}</h3>
-            </article>
-          </${Link}>`).join('')}
+      <p><img src="/statics/see_favs.webp" alt="favs icon"></p>
+      ${favs.length === 0 ? '<p>😶<br />No tienes todavía favoritos. ¡Dale caña!</p>' : ''}
+      ${favs.map(fav => `
+        <${Link} href='/article/${fav.id}'>
+          <article>
+            <div style="background-image: url('/statics/articles${fav.image}')"></div>
+            <h3>${fav.title}</h3>
+          </article>
+        </${Link}>`).join('')}
     `
   }
 }

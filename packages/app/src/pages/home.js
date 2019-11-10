@@ -1,8 +1,6 @@
-import { Logo } from '../components/Logo.js'
 import { Categories } from '../containers/Categories.js'
 import { News } from '../containers/News.js'
 import { FunnySection } from '../components/FunnySection.js'
-
 import { Component } from '../main/Component.js'
 
 class Home extends Component {
@@ -18,12 +16,9 @@ class Home extends Component {
   render ({ attrs }) {
     const { id } = attrs
     return `
-      <div>
-        <${Logo}></${Logo}>
-        <${Categories} selected="${id}"></${Categories}>
-        <${News} selected="${id}"></${News}>
-        <${FunnySection}></${FunnySection}>
-      </div>
+      <${Categories} selected="${id}"></${Categories}>
+      <${News} selected="${id}"></${News}>
+      <${FunnySection}></${FunnySection}>
     `
   }
 }
