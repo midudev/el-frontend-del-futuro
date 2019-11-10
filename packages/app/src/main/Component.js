@@ -21,7 +21,7 @@ export class Component extends HTMLElement {
   }
 
   _render ({ attrs, state }) {
-    const styles = this.getStyles()
+    const styles = this.getStyles({ attrs, state })
     const content = this.render({ attrs, state })
     this.shadowRoot.innerHTML = `${styles}${content}`
   }
@@ -35,9 +35,9 @@ export class Component extends HTMLElement {
     return attrs
   }
 
-  getStyles () {
+  getStyles ({ attrs, state }) {
     return typeof this.styles === 'function'
-      ? `<style>${this.styles()}</style>`
+      ? `<style>${this.styles({ attrs, state })}</style>`
       : ''
   }
 
