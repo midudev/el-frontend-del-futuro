@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   
   <!-- Script para crear imports mapeados -->
   
@@ -15,15 +15,13 @@
     }
   </script> -->
 
-  <script type='module' src="/main/app.js"></script>
-
-  <!-- <script type='module' src="/main/app.js"></script> -->
-
   <link rel="modulepreload" href="/main/app.js" as="script">
   <link rel="modulepreload" href="/main/polyfills.js" as="script">
   <link rel="modulepreload" href="/main/Component.js" as="script">
   <link rel="modulepreload" href="/components/Logo.js" as="script">
   
+  <script type='module' src="/main/app.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The News es un periódico digital del futuro. Serio y respetable" />
   
@@ -77,19 +75,39 @@
     }
 
     body {
+      --bkg: #fff;
+      --text: #333;
+      --text-contrast: #fff;
+
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
 
+      background-color: var(--bkg);
       box-shadow: 0 10px 25px 0 #00000033;
       color: #000;
       font-family: system-ui;
       font-size: 16px;
       overflow-x: hidden;
+      transition: background-color .3s ease;
 
       height: 100vh;
       margin: 0 auto;
       max-width: 500px;
       width: 100%;
+    }
+
+    body.is-black {
+      --bkg: #000;
+      --text: #fff;
+      --text-contrast: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        --bkg: #000;
+        --text: #fff;
+        --text-contrast: #000;
+      }
     }
 
     main {
@@ -102,10 +120,8 @@
   </style>
 
 <body>
-    <noscript>
-      <style>p { display: block; font-size: 24px; padding: 64px 16px; position: absolute; text-align: center; width: 100%; }</style>
-      <p>⚠️<br />Esta página es puramente<br />Client Side Rendering!<br /><br />Sin Javascript ☕,<br />no funciona 🙅‍♂️.</p>
-    </noscript>
-  <main>
-    <div id="router"></div>
-  </main>
+  <noscript>
+    <style>p { display: block; font-size: 24px; padding: 64px 16px; position: absolute; text-align: center; width: 100%; }</style>
+    <p>⚠️<br />Esta página es puramente<br />Client Side Rendering!<br /><br />Sin Javascript ☕,<br />no funciona 🙅‍♂️.</p>
+  </noscript>
+  <div id="app"></div>
