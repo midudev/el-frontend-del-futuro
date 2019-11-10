@@ -1,6 +1,7 @@
 import { Component } from '../main/Component.js'
 import { Link } from '../components/Link.js'
 import { Timeago } from '../components/Timeago.js'
+import { Fav } from '../components/Fav.js'
 
 export const Article = 'x-article'
 
@@ -19,9 +20,11 @@ window.customElements.define(Article, class extends Component {
     }
 
     h4 {
-      color: #333;
+      color: var(--text);
       margin: 0;
-      font-size: 14px;
+      font-size: 18px;
+      line-height: 150%;
+      padding-top: 4px;
       text-transform: uppercase;
     }
     
@@ -46,17 +49,32 @@ window.customElements.define(Article, class extends Component {
       padding-bottom: 32px;
       position: relative;
     }
+
+    ${Fav} {
+      float: right;
+    }
     `
   }
 
   render ({ attrs, state }) {
     const { title, subtitle, image, id, date } = attrs
+    const showFav = typeof attrs['show-fav'] !== 'undefined'
 
     return `
     <article>
       <h2><span>${title}</span></h2>
       <${Link} href='/article/${id}'>
-        <img alt="image" src="/statics/articles${image}" loading="lazy" intrinsicsize="250x150" />
+        <img
+          alt="image"
+          src="/statics/articles${image}"
+          loading="lazy"
+          intrinsicsize="250x150"
+        />
+        ${showFav ? `<${Fav}
+          id="${id}"
+          title="${title}"
+          image="${image}"
+        ></${Fav}>` : ''}
         <header>
           <${Timeago} date="${date}"></${Timeago}>
           <h4>${subtitle}</h4>
