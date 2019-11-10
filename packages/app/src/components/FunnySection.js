@@ -2,9 +2,13 @@ import { Component } from '../main/Component.js'
 
 export const FunnySection = 'x-funny'
 
+const INTERSECTION_OPTIONS = {
+  rootMargin: '100px'
+}
+
 window.customElements.define(FunnySection, class extends Component {
   getInitialState () {
-    return { show: false }
+    return { content: [], loading: false }
   }
 
   styles () {
@@ -16,13 +20,14 @@ window.customElements.define(FunnySection, class extends Component {
     section {
       border-radius: 3px;
       box-shadow: 6px 6px 0px rgb(254, 203, 200), -6px -6px 0px rgb(203, 204, 255);
-      scroll-snap-type: x mandatory;
-      overflow-x: scroll;
-      overflow-y: hidden;
       display: flex;
       flex-direction: row;
       height: 300px;
       justify-content: start;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      scroll-snap-type: x mandatory;
     }
 
     img, video {
@@ -37,40 +42,34 @@ window.customElements.define(FunnySection, class extends Component {
   connectedCallback () {
     const el = this.shadowRoot.querySelector('div')
     const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        // Update our state when observer callback fires
+      async ([entry]) => {
+        // Get funny content when is intersecting
         if (entry.isIntersecting) {
           observer.unobserve(el)
-          this.setState({ show: true })
+          const content = await this.services.getFunnyContent()
+          this.setState({ content })
         }
       },
-      {
-        rootMargin: '100px'
-      }
+      INTERSECTION_OPTIONS
     )
     observer.observe(el)
   }
 
-  render ({ attrs, state }) {
-    const { show } = state
+  renderItem ({ type, src }) {
+    return type === 'video'
+      ? `<video controls src="${src}"></video>`
+      : `<img src="${src}" />`
+  }
 
-    if (!show) {
-      return '<div></div>'
-    }
+  render ({ attrs, state }) {
+    const { content, loading } = state
 
     return `<div>
       <h3>😆Funny slider! 🤣</h3>
       <section>
-        <video controls src='https://i.imgur.com/lcgsSti.mp4'></video>
-        <img src='https://i.imgur.com/pJ99KKC.jpg' />
-        <video controls src='https://i.imgur.com/GDlB647.mp4'></video>
-        <img src='https://i.imgur.com/i29LQCN.jpg' />
-        <video controls src='https://i.imgur.com/3O52a2Y.mp4'></video>
-        <video controls src='https://i.imgur.com/CNFBvOt.mp4'></video>
-        <video controls src='https://i.imgur.com/AGpQujt.mp4'></video>
-        <video controls src='https://i.imgur.com/KWMmSAu.mp4'></video>
-      </section>
-    </div>
-    `
+        ${loading ? `<span>🌀</span>` : ''}
+        ${content.map(this.renderItem).join('')}
+        </section>
+      </div>`
   }
 })
