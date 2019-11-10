@@ -27,6 +27,13 @@ window.customElements.define(Fav, class extends Component {
     this.shadowRoot.addEventListener('click', this.toggleFav)
   }
 
+  async getFavs (id) {
+    const favs = await this.services.getFavs()
+    const hasFav = favs.some(fav => fav.id === id)
+    console.log({ favs, hasFav })
+    return { favs, hasFav }
+  }
+
   toggleFav = async (e) => {
     e.preventDefault()
 
@@ -38,17 +45,11 @@ window.customElements.define(Fav, class extends Component {
       : [...favs, { id, title, image }]
 
     await this.services.setFavs(newFavs)
-    this.setState({ hasFav })
+    this.setState({ hasFav: !hasFav })
   }
 
   getImage (hasFav) {
     return hasFav ? REMOVE_IMG : ADD_IMG
-  }
-
-  async getFavs (id) {
-    const favs = await this.services.getFavs()
-    const hasFav = favs.some(fav => fav.id === id)
-    return { favs, hasFav }
   }
 
   render ({ attrs, state }) {
