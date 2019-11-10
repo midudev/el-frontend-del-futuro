@@ -1,7 +1,4 @@
-import { Logo } from '../components/Logo.js'
 import { Article as SingleArticle } from '../components/Article.js'
-import { Fav } from '../components/Fav.js'
-
 import { Component } from '../main/Component.js'
 
 class Article extends Component {
@@ -10,8 +7,8 @@ class Article extends Component {
     p {
       font-size: 21px;
       margin-top: -16px;
-      line-height: 175%;
-      padding: 0 10px 50px;
+      line-height: 150%;
+      padding: 16px 10px 32px;
     }
     `
   }
@@ -20,14 +17,10 @@ class Article extends Component {
     return { article: false }
   }
 
-  connectedCallback () {
+  async connectedCallback () {
     const { id } = this.getAllAttributes()
-
-    window.fetch(`https://el-frontend-del-futuro-api.midudev.now.sh/news/${id}`)
-      .then(res => res.json())
-      .then(article => {
-        this.setState({ article })
-      })
+    const article = await this.services.getArticleBy({ id })
+    this.setState({ article })
   }
 
   render ({ state }) {
@@ -39,24 +32,14 @@ class Article extends Component {
     const { content, id, title, subtitle, image } = article
 
     return `
-      <div>
-        <${Logo}></${Logo}>
-
-        <${SingleArticle}
-          id="${id}"
-          title="${title}"
-          subtitle="${subtitle}"
-          image="${image}">
-        </${SingleArticle}>
-
-        <${Fav}
-          id="${id}"
-          title="${title}"
-          image="${image}">
-        </${Fav}>
-
+      <${SingleArticle}
+        show-fav=""
+        id="${id}"
+        title="${title}"
+        subtitle="${subtitle}"
+        image="${image}">
         <p>${content}</p>
-      </div>
+      </${SingleArticle}>
     `
   }
 }
